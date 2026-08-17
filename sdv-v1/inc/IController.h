@@ -6,5 +6,7 @@ class IController : public ISensorObserver, public IActuatorSubject
 {
 public:
 	virtual ~IController() = default;
+
+	virtual void compute() = 0;
 };
 

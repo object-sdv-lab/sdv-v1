@@ -4,7 +4,6 @@ class ISensorObserver
 public:
 	virtual ~ISensorObserver() = default;
 
-	virtual int compute() = 0;
-	virtual void notify_observer() = 0;
+	virtual void update(int new_value) = 0;
 };
 

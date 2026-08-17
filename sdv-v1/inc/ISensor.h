@@ -1,4 +1,8 @@
 #pragma once
+#include "IController.h"
+#include <iostream>
+#include <vector>
+
 class ISensor
 {
 public:

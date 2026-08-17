@@ -12,6 +12,6 @@ void RainSensor::set_value(int value) {
 
 void RainSensor::notify_observer() {
 	for (auto observer : this->sensor_observer_) {
-		observer->update(rain_value_);
+		observer->update(SensorType::RAIN, rain_value_);
 	}
 }

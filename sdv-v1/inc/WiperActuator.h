@@ -3,7 +3,12 @@
 
 class WiperActuator : public IActuator
 {
+private:
+	WiperSpeed wiper_speed_;
+
 public:
-	void update(int new_value) override;
+	WiperActuator();
+
+	void update(WiperSpeed wiper_speed) override;
 	void run() override;
 };

@@ -1,9 +1,11 @@
 #pragma once
+#include "SensorType.h"
+
 class ISensorObserver
 {
 public:
 	virtual ~ISensorObserver() = default;
 
-	virtual void update(int new_value) = 0;
+	virtual void update(SensorType type, int value) = 0;
 };
 

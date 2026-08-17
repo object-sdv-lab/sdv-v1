@@ -12,6 +12,6 @@ void SpeedSensor::set_value(int value) {
 
 void SpeedSensor::notify_observer() {
 	for (auto observer : this->sensor_observer_) {
-		observer->update(speed_value_);
+		observer->update(SensorType::SPEED, speed_value_);
 	}
 }

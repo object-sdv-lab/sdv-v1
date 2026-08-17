@@ -1,34 +1,31 @@
-﻿#include "SimulationEnvironment.h"
-#include "IActuator.h"
-#include "IController.h"
-#include "ISensor.h"
-#include <chrono>
 #include <iostream>
-#include <thread>
 #include <vector>
+#include "main.h"
 
-using namespace std::chrono_literals;
+using namespace std;
 
 int main()
 {
-    SimulationEnvironment* environment = new SimulationEnvironment();
-    // environment->set_scenario(scenario);
+    vector<IActuator*> actuators;
+    vector<IController*> controllers;
 
-    std::vector<ISensor*> sensors;
-    std::vector<IController*> controllers;
-    std::vector<IActuator*> actuators;
+    IActuator* wiper = new WiperActuator();
+    actuators.push_back(wiper);
+
+    IController* wiper_controller = new WiperController(actuators);
+    controllers.push_back(wiper_controller);
+
+    ISensor* rain_sensor = new RainSensor(controllers);
+    ISensor* speed_sensor = new SpeedSensor(controllers);
 
     while (true)
     {
-        for (ISensor* sensor : sensors)
-        {
-            sensor->sampling();
-        }
-        for (IActuator* actuator : actuators)
-        {
-            actuator->run();
-        }
+        rain_sensor->set_value(env->now_rain());
+        speed_sensor->set_value(env->now_speed());
 
-        std::this_thread::sleep_for(1s);
+        for (auto controller : controllers) {
+            controller->compute();
+        }
+        //dealy(1s);
     }
 }

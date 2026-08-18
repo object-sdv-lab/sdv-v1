@@ -3,3 +3,4 @@
 #include "SpeedSensor.h"
 #include "WiperActuator.h"
 #include "WiperController.h"
+#include "RainEnvironment.h"

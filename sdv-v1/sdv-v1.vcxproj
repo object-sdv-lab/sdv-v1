@@ -111,6 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,20 +140,28 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EnvironmentData.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="SimulationEnvironment.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\RainEnvironment.cpp" />
+    <ClCompile Include="src\RainSensor.cpp" />
+    <ClCompile Include="src\SpeedSensor.cpp" />
+    <ClCompile Include="src\WiperActuator.cpp" />
+    <ClCompile Include="src\WiperController.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EnvironmentData.h" />
-    <ClInclude Include="EventEmitter.hpp" />
-    <ClInclude Include="IActuator.h" />
-    <ClInclude Include="IController.h" />
-    <ClCompile Include="IEnvironment.h" />
-    <ClInclude Include="IEventListener.h" />
-    <ClInclude Include="IScenario.h" />
-    <ClInclude Include="ISensor.h" />
-    <ClInclude Include="SimulationEnvironment.h" />
+    <ClInclude Include="inc\IActuator.h" />
+    <ClInclude Include="inc\IActuatorSubject.h" />
+    <ClInclude Include="inc\IController.h" />
+    <ClInclude Include="inc\IEnvironment.h" />
+    <ClInclude Include="inc\ISensor.h" />
+    <ClInclude Include="inc\ISensorObserver.h" />
+    <ClInclude Include="inc\main.h" />
+    <ClInclude Include="inc\RainEnvironment.h" />
+    <ClInclude Include="inc\RainSensor.h" />
+    <ClInclude Include="inc\SensorType.h" />
+    <ClInclude Include="inc\SpeedSensor.h" />
+    <ClInclude Include="inc\WiperActuator.h" />
+    <ClInclude Include="inc\WiperController.h" />
+    <ClInclude Include="inc\WiperSpeed.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

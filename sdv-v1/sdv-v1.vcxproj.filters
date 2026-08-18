@@ -15,42 +15,66 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EnvironmentData.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\RainSensor.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SimulationEnvironment.cpp">
+    <ClCompile Include="src\SpeedSensor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WiperController.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WiperActuator.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RainEnvironment.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EventEmitter.hpp">
+    <ClInclude Include="inc\IActuator.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="EnvironmentData.h">
+    <ClInclude Include="inc\IActuatorSubject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="IActuator.h">
+    <ClInclude Include="inc\IController.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="IController.h">
+    <ClInclude Include="inc\ISensor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClCompile Include="IEnvironment.h">
-      <Filter>헤더 파일</Filter>
-    </ClCompile>
-    <ClInclude Include="IEventListener.h">
+    <ClInclude Include="inc\ISensorObserver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="IScenario.h">
+    <ClInclude Include="inc\RainSensor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ISensor.h">
+    <ClInclude Include="inc\SpeedSensor.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="SimulationEnvironment.h">
+    <ClInclude Include="inc\WiperController.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\WiperActuator.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\SensorType.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\WiperSpeed.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\main.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\IEnvironment.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\RainEnvironment.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

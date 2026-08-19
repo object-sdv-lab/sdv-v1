@@ -139,11 +139,16 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IEnvironment.h" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EventEmitter.hpp" />
+    <ClInclude Include="IActuator.h" />
+    <ClInclude Include="IController.h" />
     <ClInclude Include="IEventListener.h" />
+    <ClInclude Include="ISensorEvent.h" />
+    <ClInclude Include="Sensor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

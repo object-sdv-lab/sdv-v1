@@ -139,7 +139,20 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sdv-v1.cpp" />
+    <ClCompile Include="EnvironmentData.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SimulationEnvironment.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EnvironmentData.h" />
+    <ClInclude Include="EventEmitter.hpp" />
+    <ClInclude Include="IActuator.h" />
+    <ClInclude Include="IController.h" />
+    <ClCompile Include="IEnvironment.h" />
+    <ClInclude Include="IEventListener.h" />
+    <ClInclude Include="IScenario.h" />
+    <ClInclude Include="ISensor.h" />
+    <ClInclude Include="SimulationEnvironment.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

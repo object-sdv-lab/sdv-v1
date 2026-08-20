@@ -18,6 +18,11 @@
     <ClCompile Include="EnvironmentData.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Headlight.cpp"><Filter>소스 파일</Filter></ClCompile>
+    <ClCompile Include="HeadlightController.cpp"><Filter>소스 파일</Filter></ClCompile>
+    <ClCompile Include="LightIntensityChangedEvent.cpp"><Filter>소스 파일</Filter></ClCompile>
+    <ClCompile Include="LightSensor.cpp"><Filter>소스 파일</Filter></ClCompile>
+    <ClCompile Include="TunnelEntryScenario.cpp"><Filter>소스 파일</Filter></ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -29,6 +34,11 @@
     <ClInclude Include="EventEmitter.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Headlight.h"><Filter>헤더 파일</Filter></ClInclude>
+    <ClInclude Include="HeadlightController.h"><Filter>헤더 파일</Filter></ClInclude>
+    <ClInclude Include="LightIntensityChangedEvent.h"><Filter>헤더 파일</Filter></ClInclude>
+    <ClInclude Include="LightSensor.h"><Filter>헤더 파일</Filter></ClInclude>
+    <ClInclude Include="TunnelEntryScenario.h"><Filter>헤더 파일</Filter></ClInclude>
     <ClInclude Include="EnvironmentData.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>

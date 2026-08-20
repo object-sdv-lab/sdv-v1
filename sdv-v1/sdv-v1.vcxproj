@@ -140,19 +140,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="EnvironmentData.cpp" />
+    <ClCompile Include="Headlight.cpp" />
+    <ClCompile Include="HeadlightController.cpp" />
+    <ClCompile Include="LightIntensityChangedEvent.cpp" />
+    <ClCompile Include="LightSensor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SimulationEnvironment.cpp" />
+    <ClCompile Include="TunnelEntryScenario.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EnvironmentData.h" />
     <ClInclude Include="EventEmitter.hpp" />
+    <ClInclude Include="Headlight.h" />
+    <ClInclude Include="HeadlightController.h" />
     <ClInclude Include="IActuator.h" />
     <ClInclude Include="IController.h" />
     <ClCompile Include="IEnvironment.h" />
     <ClInclude Include="IEventListener.h" />
     <ClInclude Include="IScenario.h" />
     <ClInclude Include="ISensor.h" />
+    <ClInclude Include="LightIntensityChangedEvent.h" />
+    <ClInclude Include="LightSensor.h" />
     <ClInclude Include="SimulationEnvironment.h" />
+    <ClInclude Include="TunnelEntryScenario.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

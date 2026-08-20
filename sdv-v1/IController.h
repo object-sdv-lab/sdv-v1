@@ -1,8 +1,6 @@
 #pragma once
-#include "IEventListener.h"
-#include "ISensorEvent.h"
 
-class IController : public IEventListener<ISensorEvent>
+class IController
 {
 public:
     virtual ~IController() = default;

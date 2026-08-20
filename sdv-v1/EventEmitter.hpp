@@ -14,7 +14,7 @@ private:
 public:
     virtual ~EventEmitter() = default;
 
-    void add_listener(Listener* listener)
+    void subscribe(Listener* listener)
     {
         if (std::find(listeners_.begin(), listeners_.end(), listener) != listeners_.end())
         {
@@ -24,13 +24,13 @@ public:
         listeners_.push_back(listener);
     }
 
-    void remove_listener(Listener* listener)
+    void unsubscribe(Listener* listener)
     {
         std::erase(listeners_, listener);
     }
 
 protected:
-    void notify(const Event& event) const
+    void emit(const Event& event) const
     {
         for (auto* listener : listeners_)
         {

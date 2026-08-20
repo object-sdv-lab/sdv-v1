@@ -15,30 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EnvironmentData.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="IEnvironment.h">
-      <Filter>헤더 파일</Filter>
+    <ClCompile Include="SimulationEnvironment.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IEventListener.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="EventEmitter.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="IController.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="ISensorEvent.h">
+    <ClInclude Include="EnvironmentData.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="IActuator.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="IController.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClCompile Include="IEnvironment.h">
+      <Filter>헤더 파일</Filter>
+    </ClCompile>
+    <ClInclude Include="IEventListener.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IScenario.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
     <ClInclude Include="Sensor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SensorEvent.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulationEnvironment.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

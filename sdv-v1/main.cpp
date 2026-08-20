@@ -1,4 +1,5 @@
 ﻿#include "IActuator.h"
+﻿#include "SimulationEnvironment.h"
 #include "IController.h"
 #include "Sensor.h"
 #include <chrono>
@@ -10,8 +11,9 @@ using namespace std::chrono_literals;
 
 int main()
 {
-    IEnvironment* environment = nullptr;
     std::vector<Sensor*> sensors;
+    SimulationEnvironment* environment = new SimulationEnvironment();
+    // environment->set_scenario(scenario);
     std::vector<IController*> controllers;
     std::vector<IActuator*> actuators;
 

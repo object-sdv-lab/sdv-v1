@@ -139,11 +139,22 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Airbag.cpp" />
+    <ClCompile Include="AirbagController.cpp" />
+    <ClCompile Include="Backlight.cpp" />
+    <ClCompile Include="BacklightController.cpp" />
+    <ClCompile Include="EmergencyScenario.cpp" />
     <ClCompile Include="EnvironmentData.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SimulationEnvironment.cpp" />
+    <ClCompile Include="SpeedSensor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Airbag.h" />
+    <ClInclude Include="AirbagController.h" />
+    <ClInclude Include="Backlight.h" />
+    <ClInclude Include="BacklightController.h" />
+    <ClInclude Include="EmergencyScenario.h" />
     <ClInclude Include="EnvironmentData.h" />
     <ClInclude Include="EventEmitter.hpp" />
     <ClInclude Include="IActuator.h" />
@@ -153,6 +164,7 @@
     <ClInclude Include="IScenario.h" />
     <ClInclude Include="ISensor.h" />
     <ClInclude Include="SimulationEnvironment.h" />
+    <ClInclude Include="SpeedSensor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

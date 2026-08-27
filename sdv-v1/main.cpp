@@ -7,17 +7,40 @@
 #include <thread>
 #include <vector>
 
+#include "EmergencyScenario.h"
+
+#include "SpeedSensor.h"
+#include "Airbag.h"
+#include "AirbagController.h"
+#include "Backlight.h"
+#include "BacklightController.h"
+
 using namespace std::chrono_literals;
 
 int main()
 {
     SimulationEnvironment* environment = new SimulationEnvironment();
-    // environment->set_scenario(scenario);
+    EmergencyScenario* scenario = new EmergencyScenario();
+     environment->set_scenario(scenario);
 
-    std::vector<ISensor*> sensors;
-    std::vector<IController*> controllers;
+    
+
+    Airbag* airbag = new Airbag();
+    AirbagController* airbagController = new AirbagController(airbag);
+
+    Backlight* backlight = new Backlight();
+    BacklightController* backlightController = new BacklightController(backlight);
+
+    SpeedSensor* speedSensor = new SpeedSensor();
+    speedSensor->set_environment(environment);
+    speedSensor->subscribe(airbagController);
+    speedSensor->subscribe(backlightController);
+
+    std::vector<ISensor*> sensors = {speedSensor};
+    std::vector<IController*> controllers = { airbagController, backlightController };
     std::vector<IActuator*> actuators;
 
+    
     while (true)
     {
         for (ISensor* sensor : sensors)

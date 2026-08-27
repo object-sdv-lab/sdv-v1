@@ -1,12 +1,15 @@
 #pragma once
 #include "IController.h"
 #include "IEventListener.h"
-#include "SensorValueChangedEvent.h"
+#include "RainSensorValueChangedEvent.h"
+#include "SpeedSensorValueChangedEvent.h"
 #include "WiperActuator.h"
 
 class WiperController final :
     public IController,
-    public IEventListener<SensorValueChangedEvent>
+    public IEventListener<RainSensorValueChangedEvent>,
+    public IEventListener<SpeedSensorValueChangedEvent>
+
 {
 private:
     int rain_value_ = 0;
@@ -18,5 +21,6 @@ private:
 public:
     explicit WiperController(WiperActuator* wiper_actuator);
 
-    void on_event(const SensorValueChangedEvent& event) override;
+    void on_event(const RainSensorValueChangedEvent& event) override;
+    void on_event(const SpeedSensorValueChangedEvent& event) override;
 };

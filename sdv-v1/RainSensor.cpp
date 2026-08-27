@@ -24,5 +24,5 @@ void RainSensor::sampling()
         return;
     }
 
-    emit(SensorValueChangedEvent{SensorType::Rain, std::stoi(data.value)});
+    emit(RainSensorValueChangedEvent{std::stoi(data.value)});
 }

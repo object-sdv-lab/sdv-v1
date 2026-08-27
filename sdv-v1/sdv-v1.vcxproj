@@ -146,6 +146,7 @@
     <ClCompile Include="EnvironmentData.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RainSensor.cpp" />
+    <ClCompile Include="RainSensorValueChangedEvent.h" />
     <ClCompile Include="RainyDayScenario.cpp" />
     <ClCompile Include="SimulationEnvironment.cpp" />
     <ClCompile Include="SpeedSensor.cpp" />
@@ -163,10 +164,10 @@
     <ClInclude Include="ISensor.h" />
     <ClInclude Include="RainSensor.h" />
     <ClInclude Include="RainyDayScenario.h" />
-    <ClInclude Include="SensorValueChangedEvent.h" />
     <ClInclude Include="SensorType.h" />
     <ClInclude Include="SimulationEnvironment.h" />
     <ClInclude Include="SpeedSensor.h" />
+    <ClInclude Include="SpeedSensorValueChangedEvent.h" />
     <ClInclude Include="WiperActuator.h" />
     <ClInclude Include="WiperController.h" />
     <ClInclude Include="WiperSpeed.h" />

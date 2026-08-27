@@ -24,5 +24,5 @@ void SpeedSensor::sampling()
         return;
     }
 
-    emit(SensorValueChangedEvent{SensorType::Speed, std::stoi(data.value)});
+    emit(SpeedSensorValueChangedEvent{std::stoi(data.value)});
 }

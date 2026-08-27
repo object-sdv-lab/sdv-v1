@@ -2,9 +2,9 @@
 #include "EventEmitter.hpp"
 #include "IEnvironment.h"
 #include "ISensor.h"
-#include "SensorValueChangedEvent.h"
+#include "RainSensorValueChangedEvent.h"
 
-class RainSensor final : public ISensor, public EventEmitter<SensorValueChangedEvent>
+class RainSensor final : public ISensor, public EventEmitter<RainSensorValueChangedEvent>
 {
 private:
     IEnvironment* environment_;

@@ -5,18 +5,15 @@ WiperController::WiperController(WiperActuator* wiper_actuator) :
 {
 }
 
-void WiperController::on_event(const SensorValueChangedEvent& event)
+void WiperController::on_event(const RainSensorValueChangedEvent& event)
 {
-    switch (event.type)
-    {
-    case SensorType::Rain:
-        rain_value_ = event.value;
-        break;
-    case SensorType::Speed:
-        speed_value_ = event.value;
-        break;
-    }
+    rain_value_ = event.rain_value_;
+    wiper_actuator_->set_speed(calculate_wiper_speed());
+}
 
+void WiperController::on_event(const SpeedSensorValueChangedEvent& event)
+{
+    speed_value_ = event.speed_value_;
     wiper_actuator_->set_speed(calculate_wiper_speed());
 }
 

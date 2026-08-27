@@ -18,6 +18,12 @@ void LightSensor::sampling()
         return;
     }
 
-    light_intensity_ = std::stod(environment_->observe("light_intensity").value);
-    emit(LightIntensityChangedEvent(light_intensity_));
+    try
+    {
+        light_intensity_ = std::stod(environment_->observe("light_intensity").value);
+        emit(LightIntensityChangedEvent(light_intensity_));
+    }
+    catch (...)
+    {
+    }
 }

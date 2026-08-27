@@ -71,7 +71,7 @@
     <ClInclude Include="RainyDayScenario.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="SensorEvent.h">
+    <ClInclude Include="SensorValueChangedEvent.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="SensorType.h">

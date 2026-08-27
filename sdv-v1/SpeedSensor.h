@@ -2,9 +2,9 @@
 #include "EventEmitter.hpp"
 #include "IEnvironment.h"
 #include "ISensor.h"
-#include "SensorEvent.h"
+#include "SensorValueChangedEvent.h"
 
-class SpeedSensor final : public ISensor, public EventEmitter<SensorEvent>
+class SpeedSensor final : public ISensor, public EventEmitter<SensorValueChangedEvent>
 {
 private:
     IEnvironment* environment_;

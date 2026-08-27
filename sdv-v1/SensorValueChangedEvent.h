@@ -1,7 +1,7 @@
 #pragma once
 #include "SensorType.h"
 
-struct SensorEvent
+struct SensorValueChangedEvent
 {
     SensorType type;
     int value;

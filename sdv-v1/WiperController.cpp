@@ -5,7 +5,7 @@ WiperController::WiperController(WiperActuator* wiper_actuator) :
 {
 }
 
-void WiperController::on_event(const SensorEvent& event)
+void WiperController::on_event(const SensorValueChangedEvent& event)
 {
     switch (event.type)
     {

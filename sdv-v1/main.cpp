@@ -1,9 +1,10 @@
-﻿#include "SimulationEnvironment.h"
-#include "IActuator.h"
-#include "IController.h"
-#include "ISensor.h"
+#include "RainSensor.h"
+#include "RainyDayScenario.h"
+#include "SimulationEnvironment.h"
+#include "SpeedSensor.h"
+#include "WiperActuator.h"
+#include "WiperController.h"
 #include <chrono>
-#include <iostream>
 #include <thread>
 #include <vector>
 
@@ -12,11 +13,23 @@ using namespace std::chrono_literals;
 int main()
 {
     SimulationEnvironment* environment = new SimulationEnvironment();
-    // environment->set_scenario(scenario);
+    RainyDayScenario* scenario = new RainyDayScenario();
+    environment->set_scenario(scenario);
 
-    std::vector<ISensor*> sensors;
-    std::vector<IController*> controllers;
-    std::vector<IActuator*> actuators;
+    WiperActuator* wiper_actuator = new WiperActuator();
+    WiperController* wiper_controller = new WiperController(wiper_actuator);
+
+    RainSensor* rain_sensor = new RainSensor();
+    rain_sensor->set_environment(environment);
+    rain_sensor->subscribe(wiper_controller);
+
+    SpeedSensor* speed_sensor = new SpeedSensor();
+    speed_sensor->set_environment(environment);
+    speed_sensor->subscribe(wiper_controller);
+
+    std::vector<ISensor*> sensors = {rain_sensor, speed_sensor};
+    std::vector<IController*> controllers = {wiper_controller};
+    std::vector<IActuator*> actuators = {wiper_actuator};
 
     while (true)
     {
@@ -31,4 +44,5 @@ int main()
 
         std::this_thread::sleep_for(1s);
     }
+
 }

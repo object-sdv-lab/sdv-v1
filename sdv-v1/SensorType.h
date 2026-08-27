@@ -2,6 +2,6 @@
 
 enum class SensorType
 {
-    RAIN,
-    SPEED
+    Rain,
+    Speed
 };

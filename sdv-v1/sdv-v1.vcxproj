@@ -164,7 +164,6 @@
     <ClInclude Include="ISensor.h" />
     <ClInclude Include="RainSensor.h" />
     <ClInclude Include="RainyDayScenario.h" />
-    <ClInclude Include="SensorType.h" />
     <ClInclude Include="SimulationEnvironment.h" />
     <ClInclude Include="SpeedSensor.h" />
     <ClInclude Include="SpeedSensorValueChangedEvent.h" />

@@ -18,6 +18,12 @@ void CameraSensor::sampling()
         return;
     }
 
-    distance_ = std::stod(environment_->observe("obstacle_distance").value);
-    emit(ObstacleDistanceChangedEvent(distance_));
+    try
+    {
+        distance_ = std::stod(environment_->observe("obstacle_distance").value);
+        emit(ObstacleDistanceChangedEvent(distance_));
+    }
+    catch (...)
+    {
+    }
 }

@@ -139,11 +139,17 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CameraSensor.cpp" />
     <ClCompile Include="EnvironmentData.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObstacleDetectionScenario.cpp" />
+    <ClCompile Include="ObstacleDistanceChangedEvent.cpp" />
+    <ClCompile Include="ObstacleWarningController.cpp" />
     <ClCompile Include="SimulationEnvironment.cpp" />
+    <ClCompile Include="WarningBuzzer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CameraSensor.h" />
     <ClInclude Include="EnvironmentData.h" />
     <ClInclude Include="EventEmitter.hpp" />
     <ClInclude Include="IActuator.h" />
@@ -152,7 +158,11 @@
     <ClInclude Include="IEventListener.h" />
     <ClInclude Include="IScenario.h" />
     <ClInclude Include="ISensor.h" />
+    <ClInclude Include="ObstacleDetectionScenario.h" />
+    <ClInclude Include="ObstacleDistanceChangedEvent.h" />
+    <ClInclude Include="ObstacleWarningController.h" />
     <ClInclude Include="SimulationEnvironment.h" />
+    <ClInclude Include="WarningBuzzer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

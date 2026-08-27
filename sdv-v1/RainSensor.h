@@ -7,10 +7,12 @@
 class RainSensor final : public ISensor, public EventEmitter<SensorEvent>
 {
 private:
-    const IEnvironment& environment_;
+    IEnvironment* environment_;
 
 public:
-    explicit RainSensor(const IEnvironment& environment);
+    RainSensor();
+
+    void set_environment(IEnvironment* environment);
 
     void sampling() override;
 };

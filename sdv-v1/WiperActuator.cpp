@@ -1,7 +1,7 @@
 #include "WiperActuator.h"
 #include <iostream>
 
-void WiperActuator::on_event(const WiperSpeed& wiper_speed)
+void WiperActuator::set_speed(WiperSpeed wiper_speed)
 {
     wiper_speed_ = wiper_speed;
 }

@@ -1,14 +1,24 @@
 #include "RainSensor.h"
 #include <string>
 
-RainSensor::RainSensor(const IEnvironment& environment) :
-    environment_(environment)
+RainSensor::RainSensor() :
+    environment_(nullptr)
 {
+}
+
+void RainSensor::set_environment(IEnvironment* environment)
+{
+    environment_ = environment;
 }
 
 void RainSensor::sampling()
 {
-    const EnvironmentData data = environment_.observe("rain");
+    if (environment_ == nullptr)
+    {
+        return;
+    }
+
+    const EnvironmentData data = environment_->observe("rain");
     if (data.value.empty())
     {
         return;

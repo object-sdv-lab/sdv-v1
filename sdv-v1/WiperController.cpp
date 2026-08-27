@@ -1,5 +1,10 @@
 #include "WiperController.h"
 
+WiperController::WiperController(WiperActuator* wiper_actuator) :
+    wiper_actuator_(wiper_actuator)
+{
+}
+
 void WiperController::on_event(const SensorEvent& event)
 {
     switch (event.type)
@@ -12,7 +17,7 @@ void WiperController::on_event(const SensorEvent& event)
         break;
     }
 
-    emit(calculate_wiper_speed());
+    wiper_actuator_->set_speed(calculate_wiper_speed());
 }
 
 WiperSpeed WiperController::calculate_wiper_speed() const

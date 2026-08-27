@@ -38,7 +38,7 @@ int main()
 
     std::vector<ISensor*> sensors = {speedSensor};
     std::vector<IController*> controllers = { airbagController, backlightController };
-    std::vector<IActuator*> actuators;
+    std::vector<IActuator*> actuators = { airbag , backlight};
 
     
     while (true)
